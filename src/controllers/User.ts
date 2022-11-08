@@ -5,31 +5,13 @@ const prisma = new PrismaClient()
 
 export class User {
 
-  public static get(): UserModel {
-    return new UserModel();
+  static async get(id: number): Promise<UserModel> {
+    return (await prisma.user.findUnique({ where: { id: id } }) as UserModel);
   }
 
-  public getList(id: number): UserModel[] {
-    return [new UserModel()];
+  static async getList(): Promise<UserModel[]> {
+    return (await prisma.user.findMany({}) as UserModel[]);
   }
 
-  public async create(user: UserModel): Promise<UserModel> {
-    const newUser = await prisma.user.create({
-      data: user,
-    });
-    return newUser as UserModel;
-  }
-
-  // public async update(user: UserModel): Promise<UserModel> {
-  //   let newUser = new
-  //   // const newUser = await prisma.user.update({
-  //   //   data: user,
-  //   // });
-  //   return newUser as UserModel;
-  // }
-
-  public delete(id: number): UserModel {
-    return new UserModel();
-  }
 
 }
