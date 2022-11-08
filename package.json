@@ -7,10 +7,14 @@
     "npm": ">=8.19.2",
     "node": ">=16.18.0"
   },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
+  },
   "scripts": {
     "init": "cp ./.env.defaults ./.env",
     "startserver": "ts-node src/index.ts",
-    "test": "ts-node src/index.ts test"
+    "test": "ts-node src/index.ts test",
+    "seed":"npx prisma db seed"
   },
   "author": "",
   "license": "ISC",

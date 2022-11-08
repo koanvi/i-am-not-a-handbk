@@ -8,9 +8,10 @@ Just clone it localy and install whith npm:
 npm i
 ```
 
-Prepare project environments
+Prepare project
 ```
 npm run init
+npm run seed
 ```
 
 ## Run

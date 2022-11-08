@@ -2,13 +2,15 @@
 # ✅ create project
 # ✅ create git
 # prisma ORM
-- create models
+- ✅ create models
 - create controllers
-- seed database
+- ✅ seed database
 
 # https server
 ## express
 ## create queries
+
+# ✅ 2 unit tests
 
 ---
 

@@ -5,6 +5,7 @@ import { Tests as ArticleTest } from "./tests/article";
 (async () => {
 
   console.log(`App was started 🚀🚀🚀 at directory: ${__dirname}`);
+  
   if (process.argv.length == 2) {
     new Server();
     return;
