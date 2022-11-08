@@ -1,0 +1,44 @@
+cd ~/downloads
+
+===============
+GET:article (list)
+===============
+\
+curl \
+-X GET \
+-o site.html \
+-b cookie.txt \
+-D headers.txt \
+-d '"param1=test1&param2=test2"' \
+"http://localhost:1234/article/
+
+===============
+
+===============
+GET:article (by id)
+===============
+\
+curl \
+-X GET \
+-o site.html \
+-b cookie.txt \
+-D headers.txt \
+-d '"param1=test1&param2=test2"' \
+"http://localhost:1234/article/1
+
+===============
+
+===============
+POST:article (new)
+===============
+\
+curl \
+-X POST \
+-o site.html \
+-b cookie.txt \
+-D headers.txt \
+-d '"param1=test1&param2=test2"' \
+"http://localhost:1234/article"
+!!! add body !!!
+
+===============
