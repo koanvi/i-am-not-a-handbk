@@ -1,13 +1,24 @@
 
 import { Server } from "./modules/server";
-import "dotenv-defaults/config";
+import { Tests as ArticleTest } from "./tests/article";
 
 (async () => {
 
+  console.log(`App was started 🚀🚀🚀 at directory: ${__dirname}`);
+  if (process.argv.length == 2) {
+    new Server();
+    return;
+  }
 
-  console.log(`I was started 🚀🚀🚀 at directory: ${__dirname}`);
-  
-  new Server();
+  switch (process.argv[2]) {
+    case "test":
+      await ArticleTest.TestAll();
+      break;
 
+    default:
+      throw new Error("Incorrect argument");
+      break;
+  }
 
 })();
+

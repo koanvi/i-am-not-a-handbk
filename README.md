@@ -7,9 +7,20 @@ Just clone it localy and install whith npm:
 ```
 npm i
 ```
+
+Prepare project environments
+```
+npm run init
+```
+
 ## Run
 ```
 npm run startserver
+```
+
+## Run tests
+```
+npm run test
 ```
 
 Feel free to tell me concerning some bugs you find (hope no 👽).

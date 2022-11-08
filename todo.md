@@ -1,8 +1,10 @@
 
 # ✅ create project
 # ✅ create git
-# ✅ create db
-## prisma ORM
+# prisma ORM
+- create models
+- create controllers
+- seed database
 
 # https server
 ## express
@@ -10,7 +12,7 @@
 
 ---
 
-# app
+# app info
 - login
 - list articles order by date
 - get single art
