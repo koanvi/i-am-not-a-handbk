@@ -1,17 +1,28 @@
 
 # ✅ create project
 # ✅ create git
-# ✅ prisma ORM
-- ✅ create models
-- ✅ create controllers
-- ✅ seed database
 
-#  ✅ https server
+# ✅ prisma ORM
+## ✅ create models
+  - ✅ users (id,name,isAdmin)
+  - ✅ articles (id,name,text)
+## ✅ create controllers
+## ✅ sort by the creation date
+## ✅ seed database
+
+# ✅ https server
 ## ✅ express
 ## ✅ create routes
 ## ✅ create test queeries curl
 
 # ✅ 2 unit tests
+
+# Login / register
+# идентификация - аутентификация - авторизация
+## jwt токены
+## проверка доступов
+
+# linter on commit
 
 ---
 
@@ -20,12 +31,6 @@
 - list articles order by date
 - get single art
 - create, update, delete articles (admins)
-
-
-# db
-## tables
-- users (id,name,isAdmin)
-- articles (id,name,text)
 
 
 # task requirements

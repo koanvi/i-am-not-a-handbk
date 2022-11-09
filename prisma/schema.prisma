@@ -23,5 +23,5 @@ model Article {
   id        Int     @id @default(autoincrement())
   title     String
   text   String?
-
+  createdAt  DateTime   @default(now())
 }

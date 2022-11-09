@@ -10,7 +10,14 @@ export class Article {
   }
 
   static async getList(): Promise<ArticleModel[]> {
-    return (await prisma.article.findMany({}) as ArticleModel[]);
+    return (await prisma.article.findMany({
+      orderBy: [
+        {
+          createdAt: 'desc',
+        },
+
+      ],
+    }) as ArticleModel[]);
   }
 
   static async create(article: ArticleModel): Promise<ArticleModel|null> {
