@@ -87,6 +87,10 @@ export class Server {
       res.status(418).send({ error: '👽' });
     });
 
+    app.post('/auth', async (req: Request, res: Response) => {
+      
+    });
+
     app.listen(port, () => {
       console.log(`🚀🚀🚀 [server]: Server is running at http://localhost:${port}`);
     });

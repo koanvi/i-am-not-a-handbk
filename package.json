@@ -14,12 +14,13 @@
     "init": "cp ./.env.defaults ./.env",
     "startserver": "ts-node src/index.ts",
     "test": "ts-node src/index.ts test",
-    "seed":"npx prisma db seed"
+    "seed": "npx prisma db seed"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/express": "^4.17.14",
+    "@types/jsonwebtoken": "^8.5.9",
     "@types/node": "^18.11.9",
     "@types/validator": "^13.7.10",
     "prisma": "^4.5.0",
@@ -30,6 +31,7 @@
     "@prisma/client": "^4.5.0",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
     "sqlite3": "^5.1.2",
     "uuid": "^9.0.0"
   }

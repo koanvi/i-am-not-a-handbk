@@ -9,9 +9,20 @@ export class User {
     return (await prisma.user.findUnique({ where: { id: id } }) as UserModel);
   }
 
+  static async getByCredentials(credentials: { login: string, password: string }): Promise<UserModel> {
+    return (await prisma.user.findFirst({
+      where: {
+        name: credentials.login,
+        password: credentials.password,
+      }
+    }) as UserModel);
+  }
+
   static async getList(): Promise<UserModel[]> {
     return (await prisma.user.findMany({}) as UserModel[]);
   }
 
 
 }
+
+//todo:create password hash function
