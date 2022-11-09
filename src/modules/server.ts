@@ -33,11 +33,12 @@ export class Server {
       }
     });
 
-    app.get('/article:id', async (req: Request, res: Response) => {
+    app.get('/article/:id', async (req: Request, res: Response) => {
       try {
 
         if (!req.params["id"]) {
           res.status(400).json(new Error("need id param"));
+          return;
         }
 
         res.json(await ArticleController.get(+req.params["id"]));
@@ -51,11 +52,12 @@ export class Server {
     app.post('/article', async (req: Request, res: Response) => {
       try {
 
-        if (!req.body["Article"]) {
-          res.status(400).json(new Error("need Article param"));
+        if (!req.body["article"]) {
+          res.status(400).json(new Error("need article param"));
+          return;
         }
 
-        res.json(await ArticleController.create(req.body["Article"]));
+        res.status(201).json(await ArticleController.create(req.body["article"]));
 
       } catch (error) {
         console.error(error);
@@ -67,11 +69,12 @@ export class Server {
     app.put('/article', async (req: Request, res: Response) => {
       try {
 
-        if (!req.body["Article"]) {
-          res.status(400).json(new Error("need Article param"));
+        if (!req.body["article"]) {
+          res.status(400).json(new Error("need article param"));
+          return;
         }
 
-        res.json(await ArticleController.update(req.body["Article"]));
+        res.json(await ArticleController.update(req.body["article"]));
 
       } catch (error) {
         console.error(error);

@@ -1,20 +1,6 @@
 cd ~/downloads
 
 ===============
-GET:article (list)
-===============
-\
-curl \
--X GET \
--o site.html \
--b cookie.txt \
--D headers.txt \
--d '"param1=test1&param2=test2"' \
-"http://localhost:1234/article/
-
-===============
-
-===============
 GET:article (by id)
 ===============
 \
@@ -24,7 +10,21 @@ curl \
 -b cookie.txt \
 -D headers.txt \
 -d '"param1=test1&param2=test2"' \
-"http://localhost:1234/article/1
+"http://localhost:1234/article/1"
+
+===============
+
+===============
+GET:article (list)
+===============
+\
+curl \
+-X GET \
+-o site.html \
+-b cookie.txt \
+-D headers.txt \
+-d '"param1=test1&param2=test2"' \
+"http://localhost:1234/article/"
 
 ===============
 
@@ -37,8 +37,25 @@ curl \
 -o site.html \
 -b cookie.txt \
 -D headers.txt \
--d '"param1=test1&param2=test2"' \
+-H "Content-Type: application/json" \
+-d '{"article":{"title":"Э","text":"100"}}' \
 "http://localhost:1234/article"
-!!! add body !!!
+
+===============
+
+===============
+POST:article (new)
+===============
+\
+curl \
+-X PUT \
+-o site.html \
+-b cookie.txt \
+-D headers.txt \
+-H "Content-Type: application/json" \
+-d '{"article":{"id":1,"title":"kokoko","text":"asdasd"}}' \
+"http://localhost:1234/article"
+
+
 
 ===============

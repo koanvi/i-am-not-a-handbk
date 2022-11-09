@@ -13,11 +13,18 @@ export class Article {
     return (await prisma.article.findMany({}) as ArticleModel[]);
   }
 
-  static async create(article: ArticleModel): Promise<ArticleModel> {
-    const newArticle = await prisma.article.create({
-      data: article,
-    });
-    return newArticle as ArticleModel;
+  static async create(article: ArticleModel): Promise<ArticleModel|null> {
+    try {
+      const newArticle = await prisma.article.create({
+        data: article,
+      });
+      return newArticle as ArticleModel;      
+    } catch (error) {
+      console.log(error);
+    } finally {
+      return (null);
+    }
+
   }
 
   static async update(article: ArticleModel): Promise<ArticleModel> {

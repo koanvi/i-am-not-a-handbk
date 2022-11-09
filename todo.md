@@ -6,10 +6,10 @@
 - ✅ create controllers
 - ✅ seed database
 
-# ✅ https server
+#  ✅ https server
 ## ✅ express
 ## ✅ create routes
-## create test queeries
+## ✅ create test queeries curl
 
 # ✅ 2 unit tests
 
